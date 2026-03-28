@@ -6,10 +6,19 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Landing Page</title>
+    <link
+      rel="icon"
+      href="src/assets/favicon/THE MET.svg"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com"
+    crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <title>The Metropolitan Museum of Art</title>
     <link
       rel="stylesheet"
-      href="src/styles/main.scss"
+      href="src/styles/index.scss"
     />
     <script
       src="src/scripts/main.js"
@@ -17,6 +26,27 @@
     ></script>
   </head>
   <body>
-    <h1>Landing Page</h1>
+    <header class="header">
+      <div class="header__content">
+        <img
+          class="header__content__logo"
+          src="src/assets/favicon/THE MET.svg"
+          alt="The Metropolitan Museum of Art logo"
+        />
+        <div class="header__content__info">
+          <p class="header__content__info__tooltip">THE MET FIFTH AVENUE<br> +1 212-535-7710<br>THE MET CLOISTERS<br> +1 212-923-3700</p>
+          <img class="header__content__info__phone"
+            src="src/assets/images/icons/Icon-Phone-call.svg"
+            alt="The Metropolitan Museum of Art phone icon"
+          />
+          <div class="header__content__info__menu"></div>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="hero__title">
+        <h1 class="hero__title__align">Welcome<br> to the MET</h1>
+      </div>
+    </section>
   </body>
 </html>

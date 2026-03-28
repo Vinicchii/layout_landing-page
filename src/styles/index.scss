@@ -1,0 +1,10 @@
+@import '/src/styles/utils/variables';
+@import '/src/styles/utils/mixins';
+@import '/src/styles/blocks/hero';
+@import '/src/styles/blocks/header';
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Cinzel, serif;
+}

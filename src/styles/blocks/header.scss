@@ -1,0 +1,77 @@
+.header {
+  width: 100dvw;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  background-color: transparent;
+  z-index: 10;
+
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    &__logo {
+      width: 64px;
+      height: 46px;
+    }
+
+    &__info {
+      justify-content: space-evenly;
+      width: 70dvw;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      @include on-tablet {
+        width: 35dvw;
+      }
+
+       @include on-desktop {
+        width: 20dvw;
+      }
+
+      &__phone{
+        position: relative;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        fill: $white;
+      }
+
+      &__tooltip{
+        text-align: right;
+        width: auto;
+        font-size: 16px;
+        font-weight: bold;
+        color: $white;
+        line-height: 27px;
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+      }
+
+
+      &__menu{
+        background-image: url('../../assets/images/icons/Icon-Burger-menu.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: background-image 0.3s ease;
+        width: 24px;
+        height: 24px;
+      }
+
+      &__menu:hover{
+        cursor: pointer;
+        background-image: url('../../assets/images/icons/Icon-Burger-menu-hover.svg');
+      }
+    }
+  }
+}

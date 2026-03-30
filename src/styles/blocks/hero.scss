@@ -28,8 +28,9 @@
       height: 160px;
     }
 
-    &__align{
+    &__align {
       color: $white;
+      white-space: nowrap;
       font-family: Cinzel, sans-serif;
       font-weight: 700;
       font-style: Bold;

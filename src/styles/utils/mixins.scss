@@ -9,3 +9,94 @@
     @content;
   }
 }
+
+@mixin logo-size-mobile {
+  width: 64px;
+  height: 46px;
+}
+
+@mixin logo-size-tablet-desktop {
+  width: 87px;
+  height: 65px;
+}
+
+@mixin icon-size-mobile {
+  width: 24px;
+  height: 24px;
+}
+
+@mixin icon-size-tablet-desktop {
+  width: 32px;
+  height: 32px;
+}
+
+@mixin hover-scale {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+@mixin link-underline {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  width: fit-content;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 1px;
+    background-color: currentColor;
+    transition: width 0.3s ease-in-out;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+@mixin link-underline-active {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  width: fit-content;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+  }
+}
+
+@mixin slide-left-animation {
+  animation: slide-left 0.5s ease-out;
+  scrollbar-width: none;
+  overflow: hidden !important;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @keyframes slide-left {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}

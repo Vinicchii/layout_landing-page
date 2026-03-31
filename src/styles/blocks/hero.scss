@@ -1,11 +1,17 @@
 .hero {
   position: relative;
   background-size: cover;
+  object-fit: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin-top: -100px;
+  padding: 0;
   height: 100dvh;
-  width: 100dvw;
+  width: 100%;
   background-image: url('../../assets/images/hero.png');
+  will-change: transform;
+  contain: layout;
 
   &__title {
     position: absolute;

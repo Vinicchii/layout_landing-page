@@ -8,6 +8,8 @@ const menuIcon = document.querySelector('.header__content__info__menu');
 
 const closeIcon = document.querySelector('.header__menu__top__close');
 
+const header = document.querySelector('.header');
+
 phoneIcon.addEventListener('mouseenter', () => {
   tooltip.style.opacity = '1';
   tooltip.style.visibility = 'visible';
@@ -19,13 +21,26 @@ phoneIcon.addEventListener('mouseleave', () => {
 });
 
 menuIcon.addEventListener('click', () => {
-  const header = document.querySelector('.header__menu');
+  const headerMenu = document.querySelector('.header__menu');
 
-  header.style.display = 'block';
+  headerMenu.style.display = 'block';
 });
 
 closeIcon.addEventListener('click', () => {
-  const header = document.querySelector('.header__menu');
+  const headerMenu = document.querySelector('.header__menu');
 
-  header.style.display = 'none';
+  headerMenu.classList.add('closing');
+
+  setTimeout(() => {
+    headerMenu.style.display = 'none';
+    headerMenu.classList.remove('closing');
+  }, 500);
+});
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 150) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
 });

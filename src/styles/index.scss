@@ -2,9 +2,16 @@
 @import '/src/styles/utils/mixins';
 @import '/src/styles/blocks/hero';
 @import '/src/styles/blocks/header';
+@import '/src/styles/blocks/main';
+@import '/src/styles/blocks/museum-hours';
 
-body {
+body,
+html {
   margin: 0;
   box-sizing: border-box;
   font-family: Cinzel, serif;
+}
+
+.no-scroll {
+  overflow: hidden;
 }

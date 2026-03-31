@@ -1,0 +1,13 @@
+.main {
+  box-sizing: border-box;
+
+  @include display-grid-mobile;
+
+  @include on-tablet {
+    @include display-grid-tablet;
+  }
+
+  @include on-desktop {
+    @include display-grid-desktop;
+  }
+}

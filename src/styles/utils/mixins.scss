@@ -100,3 +100,42 @@
     }
   }
 }
+
+@mixin slide-right-animation {
+  animation: slide-right 0.5s ease-out forwards;
+
+  @keyframes slide-right {
+    from {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
+}
+
+@mixin display-grid-mobile {
+  display: grid;
+  grid-template-columns: repeat(2, 130px);
+  column-gap: 20px;
+  width: 320px;
+  padding: 0 20px;
+}
+
+@mixin display-grid-tablet {
+  display: grid;
+  grid-template-columns: repeat(6, 80px);
+  column-gap: 24px;
+  width: 744px;
+  padding: 0 72px;
+}
+
+@mixin display-grid-desktop {
+  display: grid;
+  grid-template-columns: repeat(12, 63px);
+  column-gap: 24px;
+  width: 1260px;
+  padding: 0 120px;
+}

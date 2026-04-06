@@ -120,6 +120,7 @@
   display: grid;
   grid-template-columns: repeat(2, 130px);
   column-gap: 20px;
+  box-sizing: border-box;
   width: 320px;
   padding: 0 20px;
 }
@@ -128,6 +129,7 @@
   display: grid;
   grid-template-columns: repeat(6, 80px);
   column-gap: 24px;
+  box-sizing: border-box;
   width: 744px;
   padding: 0 72px;
 }
@@ -136,6 +138,56 @@
   display: grid;
   grid-template-columns: repeat(12, 63px);
   column-gap: 24px;
+  box-sizing: border-box;
   width: 1260px;
   padding: 0 120px;
+}
+
+@mixin title-text-mobile-tablet-desktop {
+  font-size: 32px;
+  line-height: 32px;
+  letter-spacing: -1.5px;
+  font-weight: 700;
+  color: $main-dark;
+  text-align: center;
+  margin: 0 0 15px;
+
+  @include on-tablet {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  @include on-desktop {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
+
+@mixin mobile-image-size {
+  width: 130px;
+  height: 130px;
+}
+
+@mixin button-style {
+  font-family: Cinzel, serif;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 700;
+  box-sizing: border-box;
+  width: 280px;
+  height: 56px;
+  background-color: $accent-main;
+  color: $white;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    @include hover-scale;
+
+    background-color: $accent-dark;
+  }
+
+  &:active {
+    background-color: $accent-light;
+  }
 }

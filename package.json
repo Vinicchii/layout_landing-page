@@ -5,7 +5,7 @@
   "homepage": "layout_landing-page",
   "scripts": {
     "init": "mate-scripts init",
-    "start": "mate-scripts start -l",
+    "start": "mate-scripts start",
     "style-format": "npx stylelint 'src/**/*.scss' --fix --allow-empty-input",
     "format": "prettier --ignore-path .prettierignore --write './src/**/*.{html,css,scss}'",
     "lint": "npm run style-format && npm run format && mate-scripts lint",
@@ -13,6 +13,7 @@
     "build": "mate-scripts build",
     "deploy": "mate-scripts deploy",
     "update": "mate-scripts update",
+    "start:network": "vite --host",
     "postinstall": "npm run update",
     "test": "npm run lint && npm run test:only"
   },

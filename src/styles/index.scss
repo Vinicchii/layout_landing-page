@@ -4,12 +4,14 @@
 @import '/src/styles/blocks/header';
 @import '/src/styles/blocks/main';
 @import '/src/styles/blocks/museum-hours';
+@import '/src/styles/blocks/now-on-view';
 
 body,
 html {
   margin: 0;
   box-sizing: border-box;
   font-family: Cinzel, serif;
+  scroll-behavior: smooth;
 }
 
 .no-scroll {

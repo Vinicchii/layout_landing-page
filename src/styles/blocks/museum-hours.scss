@@ -1,4 +1,7 @@
 .museum-hours {
+  grid-row: 2;
+  overflow-x: hidden;
+
   @include display-grid-mobile;
 
   margin-top: 100px;

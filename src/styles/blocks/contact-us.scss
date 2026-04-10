@@ -2,6 +2,8 @@
   overflow: hidden;
   grid-row: 4;
   margin-top: 100px;
+  margin-bottom: 100px;
+  box-sizing: border-box;
 
   @include display-grid-mobile;
 
@@ -9,12 +11,14 @@
     @include display-grid-tablet;
 
     margin-top: 140px;
+    margin-bottom: 160px;
   }
 
   @include on-desktop {
     @include display-grid-desktop;
 
     margin-top: 140px;
+    margin-bottom: 160px;
   }
 
   &__wrapper {
@@ -83,6 +87,7 @@
   }
 
   &__phone {
+    text-decoration: none;
     font-size: 16px;
     line-height: 27px;
     color: $main-grey;
@@ -100,6 +105,11 @@
     color: $main-grey;
     font-weight: 700;
     margin: 0;
+  }
+
+  &__location--link {
+    text-decoration: none;
+    color: $main-grey;
   }
 
   &__form {

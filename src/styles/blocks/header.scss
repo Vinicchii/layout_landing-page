@@ -234,11 +234,25 @@
       }
     }
 
-    &__adress {
-      color: $white;
-      font-size: 16px;
-      line-height: 27px;
-      font-weight: 700;
+    &__address {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      margin-bottom: 15px;
+
+      &__text{
+        color: $white;
+        margin: 0;
+        font-size: 16px;
+        line-height: 27px;
+        font-weight: 700;
+
+        &--tel{
+          text-decoration: none;
+          color: $white;
+          cursor: pointer;
+        }
+      }
     }
 
     &__order {
